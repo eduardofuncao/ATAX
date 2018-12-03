@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Produtos</h1>
-<h1><%= link_to 'Serviços', orders_path %></h1>
+<h1><%= link_to 'Serviços', member_order_index_path %></h1>
 <table>
   <thead>
     <tr>
@@ -23,13 +23,9 @@
         <td><%= item.description %></td>
         <td><%= item.price %></td>
         <td><%= link_to 'Mostrar', item %></td>
-        <td><%= link_to 'Editar', edit_item_path(item) %></td>
-        <td><%= link_to 'Destruir', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Item', new_item_path %>
